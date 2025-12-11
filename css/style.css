@@ -7,13 +7,15 @@
 html,
 body {
     height: 100%;
-    min-height: 100%;
+    min-height: 320px;
 }
+
 body {
     display: flex;
     flex-direction: column;
     font-family: 'montserratregular';
 }
+
 main {
     flex-grow: 1;
 }
@@ -25,12 +27,10 @@ main {
     padding-right: 15px;
 }
 
-
-/*--------::selection delivery--------*/
-
+/*-----------section delivery----------------*/
 .delivery {
-    background-color: #212121;
-    color: #FFFFFF;
+    background: #212121;
+    color: #ffffff;
 }
 
 .delivery .container {
@@ -38,42 +38,453 @@ main {
     padding-top: 80px;
     padding-bottom: 70px;
 }
-
-.delivery .title {
+.delivery__title {
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 23px;
 }
-
 .delivery__title span {
     font-weight: normal;
 }
-
 .delivery__text {
-    font-size: 21px;
     font-family: 'montserratlight';
+    font-size: 21px;
 }
 
-
-/*--------::selection man woman--------*/
-
-
-.men-woman .container {
+/*----------section man woman--------------*/
+.man-woman .container {
     display: flex;
     flex-direction: row;
-    background-color: #F9F6F1;
 }
-
 .man,
 .woman {
-width: 50%;
+    width: 50%;
+    padding-top: 60px;
+    padding-bottom: 58px;
 }
-
 .man {
-    background-color: #F9F6F1;
+   background: url(../img/man.png) no-repeat; 
+   background-position-x: right;
+   background-position-y: bottom;
+}
+.woman {
+   background: url(../img/woman.png) no-repeat; 
+   background-position-x: right;
+   background-position-y: bottom;
+   padding-left: 35px;
 }
 
-.woman {
-    background-color: #F9E0E0;
+.man-woman {
+    background: linear-gradient(90deg, #F9F6F1 0%, #F9F6F1 50%, #F9E0E0 50%, #F9E0E0 100%);
+}
+
+.man-woman__title {
+    text-transform: uppercase;
+    font-size: 24px;
+    margin-bottom: 24px;
+}
+.man-woman__title span {
+    font-weight: normal;
+}
+
+.man-woman__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #D7B399;
+    width: 80px;
+    height: 30px;
+    margin-top: 40px;
+}
+
+.man-woman__link:hover,
+.man-woman__link:focus {
+    background-color: #ab8870;
+}
+
+/*-------sections new and sale--------------*/
+.new .container {
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.title {
+    font-size: 36px;
+}
+.btn {
+    background-color: #D7B399;
+    width: 220px;
+    height: 55px;
+    color:white;
+    text-transform: uppercase;
+    border: none;
+}
+.btn:hover,
+.btn:focus {
+    background-color: #ab8870;
+}
+
+.card {
+    border: #D7B399 solid 1px;
+    padding: 22px 25px 25px;
+    text-align: center;
+}
+.card__title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 25px;
+    margin-bottom: 15px;
+   
+}
+.card__price {
+    font-size: 18px;
+    font-weight: 800;
+    color:#D7B399;
+}
+.catalog {
+    display: flex;
+    flex-direction: row;
+    gap:30px;
+    margin-top:100px;
+    margin-bottom: 100px;
+}
+
+.header {
+    min-height: 10;
+    background-color: #F9F6F1;
+    align-content: center;
+}
+
+.basket__list {
+    display: flex;
+    flex-direction: row;
+}
+
+.basket__link {
+display: flex;
+    flex-direction: row;
+    }
+
+.header-menu {
+    min-height: 90px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #F9F6F1;
+    z-index: 100;
+    padding-top: 20px;
+}
+
+.section__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+/*------------position----------------*/
+
+/* .card:nth-child(2) {
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    z-index: 100;
+}
+
+.new {
+    position: fixed;
+
+}
+
+.card .bi-heart-fill {
+    fill: #D7B399;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+} */
+
+.mainmenu__list {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+    gap: 19px;
+    list-style: none;
+}
+
+.slider__item {
+    min-height: 564px;
+    background: url('../img/shoes.png') no-repeat right center;
+    display: flex;
+    padding-top: 166px;
+    justify-content: space-between;
+    min-height: 564px;
+    background: url('../img/shoes.png') no-repeat right center;
+}
+
+.slider__text {
+    font-size: 30px;
+    margin-bottom: 36px;
+}
+
+.slider__big-text {
+    font-family: "montserratbold", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 55px;
+    text-transform: uppercase;
+}
+
+.button {
+    display: block;
+    width: 240px;
+    padding: 22px 0px;
+    text-align: center;
+    background-color: #d7b399;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 54px;
+    text-decoration: none;
+}
+
+.slider__item-price {
+    font-size: "montserratbold", "Arial", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.slider__price--old {
+    font-size: 24px;
+    text-decoration-line: line-through;
+    margin-bottom: 14px;
+}
+
+.slider__price--new {
+    font-size: 42px;
+    color: #d84033;
+    font-family: "montserratbold", "Arial", sans-serif;
+}
+
+.mainmenu__list,
+.basket__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.mainmenu__list {
+    align-items: first baseline;
+}
+
+.menu__link {
+    text-decoration: none;
+    color: #000;
+    padding: 15px 0;
+    border: #000;
+    
+}
+
+.menu__link:hover,
+.menu__link:focus {
+    color: #d84033;
+}
+
+.button:hover,
+.button__link:focus {
+    background-color: #d84033;
+}
+
+
+
+.slider__wrapper {
+    position: relative;
+}
+
+.slider__button {
+    position: absolute;
+    top: 50%;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.slider__button--prev {
+    left: -100px;
+}
+
+.slider__button--next {
+    right: -100px;
+}
+
+.dress__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.dress__item {
+    width: 25%;
+    height: 236px;
+    text-align: right;
+    position: relative;
+    
+}
+
+.dress__item-grey {
+    background-color: #f4f4f4;
+    
+}
+.dress__item-cream {
+    background-color: #f9f6f1;
+    
+}
+
+.name__dress {
+    position: absolute;
+    bottom: 24px;
+    left: 30px;
+    text-transform: uppercase;
+}
+.dress .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navbar-toggler{
+    display: none;
+}
+
+
+
+
+/*-------медиа-запросы------------*/
+
+@media(max-width:1200px){
+    .catalog {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media(max-width:1186px){
+    .card {
+        width: 45%;
+    }
+    .card__img {
+        width: 80%;
+    }
+}
+
+
+@media(max-width:768px){
+    .man-woman .container {
+        flex-direction: column;
+    }
+    .man,
+    .woman{
+        width: 100%;
+    }
+    .man-woman {
+        background: linear-gradient(180deg, #F9F6F1 0%, #F9F6F1 50%, #F9E0E0 50%, #F9E0E0 100%);
+    }
+}
+
+
+@media(max-width:576px){
+    .card {
+        width: 90%;
+    }
+    .new .container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media(max-width:1110px){
+    .container {
+        width: auto;
+   
+    }
+}
+
+@media(max-width:1326px){
+    .slider__button--prev {
+    left: 0;
+    }
+    .slider__button--next {
+        right: 0;
+    }
+}
+
+@media(max-width:768px){
+    .slider__wrapper {
+        display: none;
+    }
+    .slider__button {
+        display: none;
+    }
+    .header {
+        min-height: 90px;
+    }
+}
+
+@media(max-width:992px){
+    .menu__wrapper {
+    flex-wrap: wrap;
+    }
+    .logo {
+        order: -1;
+        width: 100%;
+    }
+}
+
+@media(max-width:992px){
+    .logo {
+    order: -1;
+    width: 70%;
+    }
+    .basket {
+        order: -1;
+        text-align: right;
+    }
+}
+
+@media(max-width:600px){
+    .basket,
+    .menu {
+    display: none;
+    width: 100%;
+    }
+    .navbar-toggler {
+        display: block;
+    }
+    .mainmenu__list {
+        flex-direction: column;
+    }
+}
+
+@media(max-width:1130px){
+    .dress__item {
+    width: 33.33%;
+    }
+}
+
+@media(max-width:800px){
+    .dress__item {
+    width: 50%;
+    }
+}
+
+@media(max-width:550px){
+    .dress__item {
+    width: 100%;
+    }
+}
+
+
+.show {
+    display: block;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
